@@ -22,6 +22,7 @@ window.Controls = (function() {
     var Controls = function() {
         this._didJump = false;
         this.keys = {};
+        this.isJumping = false;
         $(window)
             .on('keydown', this._onKeyDown.bind(this))
             .on('keyup', this._onKeyUp.bind(this));
@@ -31,6 +32,11 @@ window.Controls = (function() {
         // Only jump if space wasn't pressed.
         if (e.keyCode === 32 && !this.keys.space) {
             this._didJump = true;
+            this.isJumping = true;
+            var that = this;
+            setTimeout(function () {
+                that.isJumping = false;
+            }, 100);
         }
 
         // Remember that this button is down.

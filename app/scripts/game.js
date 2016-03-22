@@ -10,6 +10,8 @@ window.Game = (function() {
 	var Game = function(el) {
 		this.el = el;
 		this.player = new window.Player(this.el.find('.Player'), this);
+		this.ground = new window.Ground(this.el.find('.Ground'), this);
+		this.cloud = new window.Cloud(this.el.find('.Cloud'), this);
 		this.isPlaying = false;
 
 		// Cache a bound onFrame since we need it each frame.
@@ -33,6 +35,8 @@ window.Game = (function() {
 
 		// Update game entities.
 		this.player.onFrame(delta);
+		this.ground.onFrame(delta);
+		this.cloud.onFrame(delta);
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
