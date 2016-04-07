@@ -5,8 +5,8 @@ window.Player = (function() {
 
 	// All these constants are in em's, multiply by 10 pixels
 	// for 1024x576px canvas.
-	var SPEED = 30; // * 10 pixels per second
-	var WIDTH = 5;
+	//var SPEED = 30; // * 10 pixels per second
+	//var WIDTH = 5;
 	var HEIGHT = 13;
 	var INITIAL_POSITION_X = 30;
 	var INITIAL_POSITION_Y = 25;
@@ -26,6 +26,7 @@ window.Player = (function() {
 	};
 
 	Player.prototype.onFrame = function(delta) {
+		delta = delta + 0;
 		if (Controls.isJumping) {
 			this.pos.y -= 2;
 		} else {
@@ -36,6 +37,10 @@ window.Player = (function() {
 
 		// Update UI
 		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
+	};
+
+	Player.prototype.getPos = function() {
+		return this.pos;
 	};
 
 	Player.prototype.checkCollisionWithBounds = function() {

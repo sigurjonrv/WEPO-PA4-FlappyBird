@@ -91,3 +91,13 @@ body {
 	background-repeat: repeat-x;
 	z-index: -1;
 }
+
+.PipeLower {
+	position: absolute;
+	width: 122.4em;
+	height: 100%; 
+	margin-top: 30em;
+	background-image: url('/images/lower_pipe.png');
+	background-repeat: no-repeat;
+	z-index: -1;
+}
