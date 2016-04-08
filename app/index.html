@@ -4,6 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+
         <meta charset="utf-8">
         <title>Flappety flapp flapp</title>
         <meta name="description" content="">
@@ -23,6 +24,27 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <audio controls autoplay loop>
+          <source id="play" src="/audio/Flappy Bird.mp3" type="audio/mpeg"/>
+          Your browser does not support the audio element.
+        </audio>
+        <audio id='flap'>
+                <source src="audio/flap.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+        </audio>
+        <audio id='point'>
+                <source src="audio/coin.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+        </audio>
+        <audio id='drop'>
+                <source src="audio/drop.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+        </audio>
+
+
+
+
 
         <div class="GameCanvas">
             <div class="Score">0</div>

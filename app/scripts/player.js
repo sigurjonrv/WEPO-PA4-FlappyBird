@@ -31,6 +31,9 @@ window.Player = (function() {
 	Player.prototype.onFrame = function() {
 		if (Controls.isJumping) {
 			this.pos.y -= 1;
+			var flapSound = document.getElementById('flap');
+			flapSound.currentTime = 0;
+			$('#flap').trigger('play');
 		} else {
 			this.pos.y += 0.5;
 		}
@@ -47,6 +50,7 @@ window.Player = (function() {
 
 	Player.prototype.checkCollisionWithBounds = function() {
 		if (this.pos.y + HEIGHT > this.game.WORLD_HEIGHT) {
+			$('#drop').trigger('play');
 			return this.game.gameover();
 		}
 	};
