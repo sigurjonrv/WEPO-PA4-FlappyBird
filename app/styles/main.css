@@ -15,8 +15,9 @@
 	width: 40em;
 	margin-left: -20em;
 	box-sizing: border-box;
-	background: purple;
+	background-image: url('/images/scoreboardBackground.png');
 	text-align: center;
+
 	-webkit-transform: translate(0, -40em);
 	-webkit-transition: -webkit-transform 0.5s;
 }
@@ -33,7 +34,7 @@
 	font-size: inherit;
 	padding: 0.4em 1.5em;
 	border: 0.2em solid white;
-	background: none;
+	background-color: black;
 	cursor: pointer;
 }
 
@@ -57,16 +58,15 @@ body {
 .GameCanvas {
 	font-size: 10px;
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 102.4em;
+	left: 25%;
+	top: 6%;
+	width: 50em;
 	height: 57.6em;
-	margin-left: -51.2em;
-	margin-top: -28.8em;
+
 	overflow: hidden;
 	background: #87CEEB;
 	background-image: url('/images/background.png');
-	background-size: 102.4em 26.8em;
+	background-size: 50em 26.8em;
 	background-repeat: no-repeat;
 	background-position: 0em 30em;
 	z-index: -1;
@@ -124,6 +124,7 @@ body {
 	top: 0.5em;
 	left: 1em;
 	font-size: 5em;
+	background-color: white;
 }
 
 .Scoreboard-highscore {
@@ -131,4 +132,5 @@ body {
 	top: 2em;
 	left: 1em;
 	font-size: 5em;
+	background-color: white;
 }
