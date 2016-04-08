@@ -4,7 +4,7 @@
 	left: 0;
 	width: 5em;
 	height: 5em;
-	background: blue;
+	background: #0080FF;
 }
 
 .Scoreboard {
@@ -133,4 +133,42 @@ body {
 	left: 1em;
 	font-size: 5em;
 	background-color: white;
+}
+
+.Player-eye {
+	position: absolute;
+	left: 3.5em;
+	top: 0.5em;
+	height: 1em;
+	width: 1em;
+	background: #FFCC00;
+}
+
+.Player-eye-ball {
+	position: absolute;
+	left: 0.25em;
+	top: 0.25em;
+	height: 0.5em;
+	width: 0.5em;
+	background: black;
+}
+
+.Player-wings {
+	position: absolute;
+	left: 1em;
+	top: 3em;
+	height: 3em;
+	width: 3em;
+	background: #FFCC00;
+	transform-origin: top left;
+	animation: 0.4s flap alternate infinite;
+}
+
+@keyframes flap {
+	from {
+		transform: rotateX(0);
+	}
+	to {
+		transform: rotateX(180deg);
+	}
 }

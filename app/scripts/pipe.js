@@ -2,6 +2,7 @@ window.Pipe = (function() {
 	'use strict';
 
 	var SPEED = 15;
+	
 	var hasPassed = false;
 
 	var Pipe = function(el, game) {
@@ -37,11 +38,11 @@ window.Pipe = (function() {
 		// console.log('   (' + (position.y) + ') >= (' + (this.pos.y - 25) + '))');
 		// console.log('-------------------------');
 
-		if((position.x + 3) >= (this.pos.x - 2) && (position.x - 3) <= (this.pos.x + 2) && (position.y) >= (this.pos.y + 25)) {
+		if((position.x + 3) >= (this.pos.x - 2) && (position.x - 3) <= (this.pos.x + 2) && position.y >= (this.pos.y + 25)) {
 			return this.game.gameover();
 		}
 
-		if((position.x + 3) >= (this.pos.x - 2) && (position.x - 3) <= (this.pos.x + 2) && (position.y) <= (this.pos.y + 11)) {
+		if((position.x + 3) >= (this.pos.x - 2) && (position.x - 3) <= (this.pos.x + 2) && position.y <= (this.pos.y + 11)) {
 			return this.game.gameover();
 		}
 

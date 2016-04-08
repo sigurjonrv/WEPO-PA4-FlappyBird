@@ -28,8 +28,7 @@ window.Player = (function() {
 		this.score = 0;
 	};
 
-	Player.prototype.onFrame = function(delta) {
-		delta = delta + 0;
+	Player.prototype.onFrame = function() {
 		if (Controls.isJumping) {
 			this.pos.y -= 1;
 		} else {
