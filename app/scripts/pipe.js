@@ -30,10 +30,14 @@ window.Pipe = (function() {
 		console.log('this.pos.y: ' + this.pos.y);
 		console.log('if((' + (position.x + 3) + ') >= (' + (this.pos.x - 2) + ') &&');
 		console.log('   (' + (position.x - 3) + ') <= (' + (this.pos.x + 2) + ') &&');
-		console.log('   (' + (position.y) + ') >= (' + (this.pos.y + 27.5) + '))');
+		console.log('   (' + (position.y) + ') >= (' + (this.pos.y - 25) + '))');
 		console.log('-------------------------');
 
 		if((position.x + 3) >= (this.pos.x - 2) && (position.x - 3) <= (this.pos.x + 2) && (position.y) >= (this.pos.y + 25)) {
+			return this.game.gameover();
+		}
+
+		if((position.x + 3) >= (this.pos.x - 2) && (position.x - 3) <= (this.pos.x + 2) && (position.y) <= (this.pos.y + 11)) {
 			return this.game.gameover();
 		}
 	};

@@ -101,3 +101,13 @@ body {
 	background-repeat: no-repeat;
 	z-index: -1;
 }
+
+.PipeUpper {
+	position: absolute;
+	width: 122.4em;
+	height: 100%; 
+	margin-top: -20em;
+	background-image: url('/images/upper_pipe.png');
+	background-repeat: no-repeat;
+	z-index: -1;
+}

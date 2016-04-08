@@ -12,7 +12,8 @@ window.Game = (function() {
 		this.player = new window.Player(this.el.find('.Player'), this);
 		this.ground = new window.Ground(this.el.find('.Ground'), this);
 		this.cloud = new window.Cloud(this.el.find('.Cloud'), this);
-		this.pipe = new window.Pipe(this.el.find('.PipeLower'), this);
+		this.pipeLower = new window.Pipe(this.el.find('.PipeLower'), this);
+		this.pipeUpper = new window.Pipe(this.el.find('.PipeUpper'), this);
 		this.isPlaying = false;
 
 		// Cache a bound onFrame since we need it each frame.
@@ -38,7 +39,8 @@ window.Game = (function() {
 		this.player.onFrame(delta);
 		this.ground.onFrame(delta);
 		this.cloud.onFrame(delta);
-		this.pipe.onFrame(delta, this.player.getPos());
+		this.pipeLower.onFrame(delta, this.player.getPos());
+		this.pipeUpper.onFrame(delta, this.player.getPos());
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
@@ -61,7 +63,8 @@ window.Game = (function() {
 	 */
 	Game.prototype.reset = function() {
 		this.player.reset();
-		this.pipe.reset();
+		this.pipeLower.reset();
+		this.pipeUpper.reset();
 	};
 
 	/**
