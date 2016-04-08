@@ -39,14 +39,17 @@ window.Pipe = (function() {
 		// console.log('-------------------------');
 
 		if((position.x + 3) >= (this.pos.x - 2) && (position.x - 3) <= (this.pos.x + 2) && position.y >= (this.pos.y + 25)) {
+			$('#drop').trigger('play');
 			return this.game.gameover();
 		}
 
 		if((position.x + 3) >= (this.pos.x - 2) && (position.x - 3) <= (this.pos.x + 2) && position.y <= (this.pos.y + 11)) {
+			$('#drop').trigger('play');
 			return this.game.gameover();
 		}
 
 		if(this.pos.x < position.x && !hasPassed){
+			$('#point').trigger('play');
 			this.player.score += 1;
 			$('.Score').html(this.player.score);
 			hasPassed = true;

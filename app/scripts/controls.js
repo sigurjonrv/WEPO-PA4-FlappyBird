@@ -10,8 +10,10 @@ window.Controls = (function() {
         37: 'left',
         38: 'up',
         39: 'right',
-        40: 'down'
+        40: 'down',
+        77: 'mute'
     };
+    //var isMute = false;
 
     /**
      * A singleton class which abstracts all player input,
@@ -37,6 +39,9 @@ window.Controls = (function() {
             setTimeout(function () {
                 that.isJumping = false;
             }, 100);
+        }
+        if(e.keyCode === 77){
+            this.game.mute();
         }
 
         // Remember that this button is down.
