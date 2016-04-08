@@ -83,6 +83,11 @@ window.Game = (function() {
 					scoreboardEl.removeClass('is-visible');
 					that.start();
 				});
+		if(this.player.score > this.player.highscore) {
+			this.player.highscore = this.player.score;
+		}
+		$('.Scoreboard-score>span').html(this.player.score);
+		$('.Scoreboard-highscore>span').html(this.player.highscore);
 	};
 
 	/**

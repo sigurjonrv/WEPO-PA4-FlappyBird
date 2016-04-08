@@ -111,3 +111,24 @@ body {
 	background-repeat: no-repeat;
 	z-index: -1;
 }
+
+.Score {
+	position: absolute;
+	top: 0.5em;
+	left: 1em;
+	font-size: 5em;
+}
+
+.Scoreboard-score {
+	position: absolute;
+	top: 0.5em;
+	left: 1em;
+	font-size: 5em;
+}
+
+.Scoreboard-highscore {
+	position: absolute;
+	top: 2em;
+	left: 1em;
+	font-size: 5em;
+}
